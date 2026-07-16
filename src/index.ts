@@ -24,10 +24,9 @@ import multer from "multer";
 await connectDB();
 
 
-
 // creating constants
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 const storage = multer.diskStorage({
 	destination(req, file, callback) {
 		callback(null, "src/uploads/")
@@ -60,8 +59,6 @@ app.use(cors({
 app.use("/public", express.static("src/static"));
 app.use("/uploads", express.static("src/uploads"));
 
-// multipart/form-data
-// <input type="file" name="xyz"/>
 
 // creating routes
 app.get("/", (req: Request, res: Response) => {

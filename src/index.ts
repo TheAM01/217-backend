@@ -74,6 +74,8 @@ app.post("/profile", upload.single("profilePicture"), (req: Request, res: Respon
 });
 
 
+
+
 // assigning routers
 app.use("/api/students", studentsRouter);
 app.use("/api/batches", batchesRouter);

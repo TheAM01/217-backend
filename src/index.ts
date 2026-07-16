@@ -14,7 +14,7 @@ import { auth } from "./middleware/auth.ts";
 
 // importing packages
 import cookieParser from "cookie-parser";
-import helmet from "helmet";
+// import helmet from "helmet";
 import morgan from "morgan";
 import cors from "cors";
 import multer from "multer";
@@ -44,7 +44,7 @@ app.use(logger);
 app.use(express.json());
 app.use(cookieParser())
 app.use("/api", authentication);
-app.use(helmet());
+// app.use(helmet());
 app.use(morgan("tiny"));
 app.use(cors({
 	origin: [
